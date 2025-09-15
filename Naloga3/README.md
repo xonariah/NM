@@ -1,25 +1,37 @@
-# Naravni interpolacijski kubični zlepek
+# Matematično nihalo
 
 Avtor: Ariana Kržan <ak1193@student.uni-lj.si>
 
-Naloga definira podatkovni tip `Zlepek` za naravni interpolacijski kubični zlepek.  
-Zlepek je sestavljen iz kosovnih polinomov tretje stopnje, ki interpolirajo podane točke \((x_i, f_i)\) tako, da so funkcija in njeni prvi ter drugi odvodi zvezni po celotnem intervalu. Na robovih velja naravni pogoj \(S''(x_1) = S''(x_n) = 0\).  
+Ta naloga numerično rešuje gibanje matematičnega nihala, ki ga opisuje nelinearna diferencialna enačba drugega reda. Enačbo pretvorimo v sistem dveh enačb prvega reda in jo rešujemo z metodo Dormand–Prince 5. reda (DOPRI5).  
 
-Glavna funkcija `interpoliraj(x, y)` vrne objekt tipa `Zlepek`, ki ga nato lahko uporabimo za izračun vrednosti zlepka ali za vizualizacijo.
+Program omogoča tudi primerjavo gibanja matematičnega nihala s harmoničnim (linearnim) približkom ter vizualizacijo vpliva začetne energije na nihajni čas.
+
+## Delovanje paketa
+Pred pričetkom izvajanja naslednjih odsekov kod se je najprej potrebno premakniti v mapo Naloga1 in nato pognati naslednje ukaze:
+```julia
+import Pkg
+Pkg.activate(".")
+```
 
 ## Primer uporabe
 
-Primer uporabe je prikazan v programu, ki se nahaja v `doc/demo.jl`.  
-Poženemo ga v interaktivni zanki Julie z ukazi:
+Primer uporabe je prikazan v datoteki 'doc/demo.jl'. Poženemo ga z naslednjim ukazom:
 
 ```julia
-include("Naloga1/doc/demo.jl")
+include("./doc/demo.jl")
 ```
 
 ## Testi
 
-Teste poženemo z ukazom:
+Teste poženemo z naslednjim ukazom:
 
 ```julia
-include("Naloga1/test/runtests.jl")
+include("./test/runtests.jl")
+```
+
+## Poročilo
+
+Zgenerirano poročilo v obliki PDF se že nahaja na lokaciji 'pdf/porocilo.pdf'. Zgenerirati ga je možno z naslednjim ukazom:
+```julia
+include("./doc/makedocs.jl")
 ```
