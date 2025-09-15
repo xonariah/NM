@@ -7,7 +7,7 @@ Ta naloga numerično rešuje gibanje matematičnega nihala, ki ga opisuje neline
 Program omogoča tudi primerjavo gibanja matematičnega nihala s harmoničnim (linearnim) približkom ter vizualizacijo vpliva začetne energije na nihajni čas.
 
 ## Delovanje paketa
-Pred pričetkom izvajanja naslednjih odsekov kod se je najprej potrebno premakniti v mapo Naloga1 in nato pognati naslednje ukaze:
+Pred pričetkom izvajanja naslednjih odsekov kod se je najprej potrebno premakniti v mapo Naloga3 in nato pognati naslednje ukaze:
 ```julia
 import Pkg
 Pkg.activate(".")
