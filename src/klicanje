@@ -1,0 +1,21 @@
+import Pkg
+Pkg.activate(".")
+
+include("./src/Naloga2.jl")
+using .Naloga2
+
+x = [0.0, 1.0, 2.0, 3.0, 4.0]
+y = [0.0, 1.0, 0.0, 1.0, 0.0]
+
+Z = interpoliraj(x, y)
+plot_zlepek(Z)
+
+println("Zlepek v x = 2.5: ", vrednost(Z, 2.5))
+
+import Pkg
+Pkg.activate(".")
+include("./doc/demo.jl")
+include("./test/runtests.jl")
+include("./doc/makedocs.jl")
+
+Pkg.test()
