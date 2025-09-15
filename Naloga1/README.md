@@ -22,6 +22,16 @@ Primer uporabe je prikazan v datoteki 'doc/demo.jl'. Poženemo ga z naslednjim u
 include("./doc/demo.jl")
 ```
 
+Uporabimo pa lahko paket tudi na naslednji način:
+```julia
+include("./src/Naloga1.jl")
+using .Naloga1
+x = [0.0, 1.0, 2.0, 3.0, 4.0]
+y = [0.0, 1.0, 0.0, 1.0, 0.0]
+Z = interpoliraj(x, y)
+plot_zlepek(Z)
+```
+
 ## Testi
 
 Teste poženemo z naslednjim ukazom:
